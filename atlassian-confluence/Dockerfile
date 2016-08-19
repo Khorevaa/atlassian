@@ -1,6 +1,6 @@
 FROM relateiq/oracle-java8
 
-ENV CONFLUENCE_VERSION 5.8.6
+ENV CONFLUENCE_VERSION 5.10.3
 ENV CONFLUENCE_HOME /opt/confluence-home
 ENV HOME /opt/confluence-home
 

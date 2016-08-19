@@ -1,6 +1,6 @@
 FROM relateiq/oracle-java8
 
-ENV CROWD_VERSION 2.8.3
+ENV CROWD_VERSION 2.9.1
 ENV CROWD_HOME /opt/crowd-home
 ENV HOME /opt/crowd-home
 
