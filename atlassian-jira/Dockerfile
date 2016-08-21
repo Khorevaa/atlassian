@@ -41,9 +41,9 @@ USER daemon:daemon
 # Set volume mount points for installation and home directory. Changes to the
 # home directory needs to be persisted as well as parts of the installation
 # directory due to eg. logs.
-VOLUME ["/var/atlassian/jira", "/opt/atlassian/jira/logs", "/opt/jira-home"]
+VOLUME ["/opt/jira-home", "/opt/jira/logs"]
 
-WORKDIR /opt/jira
+WORKDIR /opt/jira-home
 
 COPY "docker-entrypoint.sh" "/"
 ENTRYPOINT ["/docker-entrypoint.sh"]
