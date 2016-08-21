@@ -1,6 +1,6 @@
 ## Atlassian jira
 
-This is the source for the automated build of the trusted `mhubig/atlassian-jira`
+This is the source for the automated build of the trusted `frootdock/atlassian-jira`
 image. For more Informations on the webapp please refere to the offical Atlassian jira
 [website][1].
 

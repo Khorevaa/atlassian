@@ -1,5 +1,5 @@
 bamboo:
-  image: mhubig/atlassian-bamboo
+  image: frootdock/atlassian-bamboo
   restart: always
   links:
     - database

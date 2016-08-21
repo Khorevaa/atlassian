@@ -1,6 +1,6 @@
 ## Atlassian crowd
 
-This is the source for the automated build of the trusted `mhubig/atlassian-crowd`
+This is the source for the automated build of the trusted `frootdock/atlassian-crowd`
 image. For more Informations on the webapp please refere to the offical Atlassian crowd
 [website][1].
 

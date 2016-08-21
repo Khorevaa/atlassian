@@ -1,5 +1,5 @@
 stash:
-  image: mhubig/atlassian-stash
+  image: frootdock/atlassian-stash
   restart: always
   links:
     - database

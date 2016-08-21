@@ -1,6 +1,6 @@
 ## Atlassian stash
 
-This is the source for the automated build of the trusted `mhubig/atlassian-stash`
+This is the source for the automated build of the trusted `frootdock/atlassian-stash`
 image. For more Informations on the webapp please refere to the offical Atlassian stash
 [website][1].
 

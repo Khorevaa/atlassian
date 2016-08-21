@@ -1,6 +1,6 @@
 ## Atlassian Bamboo
 
-This is the source for the automated build of the trusted `mhubig/atlassian-bamboo`
+This is the source for the automated build of the trusted `frootdock/atlassian-bamboo`
 image. For more Informations on the webapp please refere to the offical Atlassian Bamboo
 [website][1].
 

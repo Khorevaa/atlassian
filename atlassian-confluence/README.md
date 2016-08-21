@@ -1,6 +1,6 @@
 ## Atlassian confluence
 
-This is the source for the automated build of the trusted `mhubig/atlassian-confluence`
+This is the source for the automated build of the trusted `frootdock/atlassian-confluence`
 image. For more Informations on the webapp please refere to the offical Atlassian confluence
 [website][1].
 

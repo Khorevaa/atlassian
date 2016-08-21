@@ -1,5 +1,5 @@
 nginx:
-  image: nginx:1.10.11
+  image: nginx:1.10.1
   restart: always
   ports:
     - "51080:80"
@@ -11,7 +11,7 @@ nginx:
     - crowd
     - bamboo
   volumes:
-    - nginx.conf:/etc/nginx/nginx.conf
+    - /etc/nginx/nginx.conf
 
 bitbucket:
   image: frootdock/atlassian-bitbucket
@@ -19,7 +19,7 @@ bitbucket:
   links:
     - database
   volumes:
-    - atlassian-bitbucket/home:/opt/bitbucket-home
+    - /opt/bitbucket-home
 
 jira:
   image: frootdock/atlassian-jira
@@ -27,7 +27,7 @@ jira:
   links:
     - database
   volumes:
-    - atlassian-jira/home:/opt/jira-home
+    - /opt/jira-home
 
 confluence:
   image: frootdock/atlassian-confluence
@@ -35,7 +35,7 @@ confluence:
   links:
     - database
   volumes:
-    - atlassian-confluence/home:/opt/confluence-home
+    - /opt/confluence-home
 
 crowd:
   image: frootdock/atlassian-crowd
@@ -43,7 +43,7 @@ crowd:
   links:
     - database
   volumes:
-    - atlassian-crowd/home:/opt/crowd-home
+    - /opt/crowd-home
 
 bamboo:
   image: frootdock/atlassian-bamboo
@@ -51,10 +51,10 @@ bamboo:
   links:
     - database
   volumes:
-    - atlassian-bamboo/home:/opt/bamboo-home
+    - /opt/bamboo-home
 
 database:
-  image: postgres:9.4
+  image: frootdock/atlassian-database
   restart: always
   volumes:
     - data:/var/lib/postgresql/data

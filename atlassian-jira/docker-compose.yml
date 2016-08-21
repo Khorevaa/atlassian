@@ -1,5 +1,5 @@
 jira:
-  image: mhubig/atlassian-jira
+  image: frootdock/atlassian-jira
   restart: always
   links:
     - database

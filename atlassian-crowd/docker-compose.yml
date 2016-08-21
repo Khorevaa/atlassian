@@ -1,5 +1,5 @@
 crowd:
-  image: mhubig/atlassian-crowd
+  image: frootdock/atlassian-crowd
   restart: always
   links:
     - database

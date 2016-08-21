@@ -14,7 +14,7 @@ nginx:
     - nginx.conf:/etc/nginx/nginx.conf
 
 stash:
-  image: mhubig/atlassian-stash
+  image: frootdock/atlassian-stash
   restart: always
   links:
     - database
@@ -22,7 +22,7 @@ stash:
     - atlassian-stash/home:/opt/stash-home
 
 jira:
-  image: mhubig/atlassian-jira
+  image: frootdock/atlassian-jira
   restart: always
   links:
     - database
@@ -30,7 +30,7 @@ jira:
     - atlassian-jira/home:/opt/jira-home
 
 confluence:
-  image: mhubig/atlassian-confluence
+  image: frootdock/atlassian-confluence
   restart: always
   links:
     - database
@@ -38,7 +38,7 @@ confluence:
     - atlassian-confluence/home:/opt/confluence-home
 
 crowd:
-  image: mhubig/atlassian-crowd
+  image: frootdock/atlassian-crowd
   restart: always
   links:
     - database
@@ -46,7 +46,7 @@ crowd:
     - atlassian-crowd/home:/opt/crowd-home
 
 bamboo:
-  image: mhubig/atlassian-bamboo
+  image: frootdock/atlassian-bamboo
   restart: always
   links:
     - database

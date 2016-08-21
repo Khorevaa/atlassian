@@ -1,5 +1,5 @@
 confluence:
-  image: mhubig/atlassian-confluence
+  image: frootdock/atlassian-confluence
   restart: always
   links:
     - database
