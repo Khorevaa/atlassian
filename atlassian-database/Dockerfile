@@ -15,9 +15,9 @@ COPY "setup-jira-db.sh" "${ENTRY_DIR}"
 RUN chmod -R +x ${ENTRY_DIR}
 
 ENTRYPOINT [
-    "${ENTRY_DIR}/setup-bamboo-db.sh",
-    "${ENTRY_DIR}/setup-bitbucket-db.sh",
-    "${ENTRY_DIR}/setup-confluence-db.sh",
-    "${ENTRY_DIR}/setup-crowd-db.sh",
-    "${ENTRY_DIR}/setup-jira-db.sh",
+    "/docker-entrypoint-initdb.d/setup-bamboo-db.sh",
+    "/docker-entrypoint-initdb.d/setup-bitbucket-db.sh",
+    "/docker-entrypoint-initdb.d/setup-confluence-db.sh",
+    "/docker-entrypoint-initdb.d/setup-crowd-db.sh",
+    "/docker-entrypoint-initdb.d/setup-jira-db.sh",
 ]
