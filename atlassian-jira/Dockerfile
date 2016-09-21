@@ -5,6 +5,9 @@ ENV JIRA_HOME /opt/jira-home
 ENV JIRA_INSTALL /opt/jira
 ENV HOME /opt/jira-home
 
+RUN mkdir -p "${JIRA_HOME}"
+COPY "docker-entrypoint.sh" "/opt/jira-home"
+RUN chmod +x "${JIRA_HOME}/docker-entrypoint.sh"
 
 # Install Atlassian JIRA and helper tools and setup initial home
 # directory structure.
@@ -13,7 +16,6 @@ RUN set -x \
     && apt-get install --quiet --yes --no-install-recommends libtcnative-1 xmlstarlet \
     && apt-get install --quiet --yes curl \
     && apt-get clean \
-    && mkdir -p                "${JIRA_HOME}" \
     && mkdir -p                "${JIRA_HOME}/caches/indexes" \
     && chmod -R 700            "${JIRA_HOME}" \
     && chown -R daemon:daemon  "${JIRA_HOME}" \
@@ -45,8 +47,6 @@ VOLUME ["/opt/jira-home", "/opt/jira/logs"]
 
 WORKDIR /opt/jira-home
 
-COPY "docker-entrypoint.sh" "/opt/jira-home"
-RUN chmod +x "${JIRA_HOME}/docker-entrypoint.sh"
 ENTRYPOINT ["/opt/jira-home/docker-entrypoint.sh"]
 
 # Run Atlassian JIRA as a foreground process by default.
