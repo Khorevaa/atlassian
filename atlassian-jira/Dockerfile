@@ -46,6 +46,7 @@ VOLUME ["/opt/jira-home", "/opt/jira/logs"]
 WORKDIR /opt/jira-home
 
 COPY "docker-entrypoint.sh" "/opt/jira-home"
+RUN chmod +x "${JIRA_HOME}/docker-entrypoint.sh"
 ENTRYPOINT ["/opt/jira-home/docker-entrypoint.sh"]
 
 # Run Atlassian JIRA as a foreground process by default.
