@@ -4,6 +4,7 @@ ENV JIRA_VERSION 7.1.9
 ENV JIRA_HOME /opt/jira-home
 ENV JIRA_INSTALL /opt/jira
 ENV HOME /opt/jira-home
+ENV JVM_SUPPORT_RECOMMENDED_ARGS -Datlassian.plugins.enable.wait=300
 
 RUN mkdir -p "${JIRA_HOME}"
 COPY "docker-entrypoint.sh" "/opt/jira-home"

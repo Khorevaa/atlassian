@@ -10,8 +10,12 @@ nginx:
     - confluence
     - crowd
     - bamboo
+  environment:
+     - CUSTOM_NGINX_HOST=foobar.com
+     - CUSTOM_NGINX_PORT=80
   volumes:
-    - /etc/nginx/nginx.conf
+   - ./nginx.conf.template:/etc/nginx/conf.d/nginx.conf.template
+  command: /bin/bash -c "envsubst '$$CUSTOM_NGINX_HOST $$CUSTOM_NGINX_PORT' < /etc/nginx/conf.d/nginx.conf.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
 
 bitbucket:
   image: frootdock/atlassian-bitbucket
