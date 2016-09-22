@@ -8,4 +8,4 @@ RUN mkdir -p ${NGINX_HOME_DIR}
 
 COPY "nginx.conf.template" "${NGINX_HOME_DIR}"
 
-CMD["envsubst '$$CUSTOM_NGINX_HOST $$CUSTOM_NGINX_PORT' < /home/nginx/nginx.conf.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
+CMD ["envsubst '$$CUSTOM_NGINX_HOST $$CUSTOM_NGINX_PORT' < /home/nginx/nginx.conf.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
