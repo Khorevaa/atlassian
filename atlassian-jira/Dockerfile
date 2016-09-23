@@ -33,6 +33,9 @@ RUN set -x \
 # use new jar
 COPY atlassian-extras-3.1.2.jar /opt/atlassian/jira/atlassian-jira/WEB-INF/lib/atlassian-extras-3.1.2.jar
 
+COPY "docker-entrypoint.sh" "/"
+RUN chmod +x "/docker-entrypoint.sh"
+
 # Use the default unprivileged account. This could be considered bad practice
 # on systems where multiple processes end up being executed by 'daemon' but
 # here we only ever run one process anyway.
@@ -49,7 +52,6 @@ VOLUME ["/var/atlassian/jira", "/opt/atlassian/jira/logs"]
 # Set the default working directory as the installation directory.
 WORKDIR /var/atlassian/jira
 
-COPY "docker-entrypoint.sh" "/"
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 # Run Atlassian JIRA as a foreground process by default.
