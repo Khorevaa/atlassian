@@ -7,6 +7,8 @@ ENV CUSTOM_NGINX_PORT 80
 
 RUN mkdir -p ${NGINX_HOME_DIR}
 
+RUN rm /etc/nginx/conf.d/default.conf
+
 COPY "nginx.conf.template" "${NGINX_HOME_DIR}"
 
 RUN cat "${NGINX_HOME_DIR}/${CONF_TEMPLATE_NAME}" > /etc/nginx/conf.d/nginx.conf

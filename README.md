@@ -47,6 +47,10 @@ are some examples:
 If you deploy the apps for the first time you may need to restore the
 databases from a backup and adapt the database connection settings!
 
+### Cheatsheet
+    If container is not running, but you want to run it and have access via bash
+    $ sudo docker run -i -t --entrypoint /bin/bash atlassian-proxy:1.0
+
 ### Develop Mode / Debug an image
 
     # use the development compose file
