@@ -21,6 +21,10 @@ In order to use this image you need at least [docker 1.6.0][2] and [docker-compo
 
 If you deploy the app for the first time you may need to restore the database from a backup!
 
+### Database Configuration
+
+    /var/atlassian/jira/dbconfig.xml
+
 ### Debug (aka. go inside) an image
 
     # execute a bash shell
