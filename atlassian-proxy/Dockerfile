@@ -10,5 +10,3 @@ RUN mkdir -p ${NGINX_HOME_DIR}
 COPY "nginx.conf.template" "${NGINX_HOME_DIR}"
 
 RUN cat "${NGINX_HOME_DIR}/${CONF_TEMPLATE_NAME}" > /etc/nginx/conf.d/default.conf
-
-CMD ["nginx", "-g", "'daemon off;'"]
