@@ -53,6 +53,8 @@ bamboo:
 database:
   image: frootdock/atlassian-database
   restart: always
+  ports:
+      - "55432:5432"
   volumes:
     - /var/lib/postgresql/data
     - /tmp/dumps # import backups

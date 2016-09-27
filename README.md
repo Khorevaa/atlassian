@@ -1,22 +1,22 @@
 ## Atlassian services
 
-    Version: 1.1.0
+    Version: 1.0
 
-This repository holds a dockerized orchestration of the Atlassian web apps
-Jira, Stash and Confluence. To simplify the usermangement Crowd is also
-included. For more information on the apps please refere to the offical
-Atlassian websites:
+This repository holds Atlassian tools in the docker containers so you 
+can easily launch them in one go by utilizing docker compose / docker cloud:
 
-- [Jira][1]
-- [Stash][2]
-- [Confluence][3]
-- [Crowd][4]
-- [Bamboo][5]
+- Jira
+- Confluence
+- Bitbucket
+- Bamboo
+- Crowd
 
 ### Prerequisites
 
 In order to run this apps you need to make sure you're running at least
-[docker 1.6.0][6] and [docker-compose 1.2.0][7]. For detailed installation
+[docker 1.6.0][6] and [docker-compose 1.2.0][7] or Docker Cloud. 
+
+For detailed installation
 instructions please refere to the origin websites:
 
   - [https://docs.docker.com/installation][8]
