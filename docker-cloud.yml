@@ -37,6 +37,7 @@ confluence:
 crowd:
   image: frootdock/atlassian-crowd
   restart: always
+  privileged: true
   links:
     - database
   volumes:
