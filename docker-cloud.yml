@@ -13,6 +13,8 @@ nginx:
 bitbucket:
   image: frootdock/atlassian-bitbucket
   restart: always
+  environment:
+    - JVM_SUPPORT_RECOMMENDED_ARGS=-Djava.security.egd=file:/dev/./urandom
   links:
     - database
   volumes:
