@@ -3,6 +3,7 @@ FROM relateiq/oracle-java8
 ENV BITBUCKET_VERSION 4.8.3
 ENV BITBUCKET_HOME /opt/bitbucket-home
 ENV HOME /opt/bitbucket-home
+ENV JVM_SUPPORT_RECOMMENDED_ARGS -Djava.security.egd=file:/dev/./urandom
 
 RUN apt-get update -y && \
     apt-get install git -y
