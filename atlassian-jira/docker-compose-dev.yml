@@ -7,7 +7,8 @@ jira:
   links:
     - database
   volumes:
-    - home:/opt/jira-home
+    - /var/atlassian/jira
+    - /opt/atlassian/jira
 
 database:
   image: postgres:9.4

@@ -27,7 +27,8 @@ jira:
   links:
     - database
   volumes:
-    - atlassian-jira/home:/opt/jira-home
+    - atlassian-jira/home:/var/atlassian/jira
+    - atlassian-jira-install:/opt/atlassian/jira
 
 confluence:
   image: frootdock/atlassian-confluence
