@@ -1,4 +1,4 @@
-FROM relateiq/oracle-java8
+FROM frootdock/docker-oracle-jdk8
 
 ENV bamboo_VERSION 5.12.3.1
 ENV bamboo_HOME /opt/bamboo-home
